@@ -108,7 +108,7 @@ public class FunctionLibrary
 		{
 			captdata=driver.findElement(By.name(LocatorValue)).getAttribute("value");
 		}
-		FileWriter fw=new FileWriter (System.getProperty("user.dir")+"\\CaptureData\\suppnumber.txt");
+		FileWriter fw=new FileWriter (System.getProperty("user.dir")+"\\CaptureData\\captnumber.txt");
 		BufferedWriter bw=new BufferedWriter(fw);
 		bw.write(captdata);
 		bw.flush();
@@ -117,7 +117,7 @@ public class FunctionLibrary
 
 	public static void supplierTable(WebDriver driver,String column) throws Exception
 	{
-		FileReader fr = new FileReader("./CaptureData/suppnumber.txt");
+		FileReader fr = new FileReader("./CaptureData/captnumber.txt");
 		BufferedReader br = new BufferedReader(fr);
 		String Exp_data=br.readLine();
 
@@ -138,7 +138,7 @@ public class FunctionLibrary
 		List<WebElement>rows=table.findElements(By.tagName("tr"));
 		for(int i=1;i<rows.size();i++){
 			String act_data=driver.findElement(By.xpath("//table[@id='tbl_a_supplierslist']/tbody/tr["+i+"]/td["+column+"]/div/span/span")).getText();
-			Assert.assertEquals(act_data, Exp_data);
+			Assert.assertEquals(act_data, Exp_data,"Data not found in Table");
 			System.out.println(act_data+"   "+Exp_data);
 			break;		
 		}
@@ -210,25 +210,30 @@ public class FunctionLibrary
 		}
 	}
 
-	public static void tableData(WebDriver driver,String Locator_Value) throws Throwable 
+		public static void stockTable(WebDriver driver,String ExpData) throws Throwable 
 	{
-		
-
-	}
-	public static void stockTable(WebDriver driver,String Locator_Value,String TestData) throws Throwable 
-	{
-		if (!driver.findElement(By.xpath(("search-textbox"))).isDisplayed());
-		Thread.sleep(3000);
-		driver.findElement(By.xpath(("search-panel"))).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath(("search-textbox"))).sendKeys(TestData);
-		Thread.sleep(3000);
-		driver.findElement(By.xpath(("search-button"))).click();
-		Thread.sleep(3000);
-		String ActualData = driver.findElement(By.xpath(Locator_Value)).getText();
-		System.out.println(TestData+"   "+ActualData);
-		Assert.assertEquals(ActualData,TestData,"Data Not Found in Table");
-
+		if(driver.findElement(By.xpath("//*[@id='psearch']")).isDisplayed()){
+			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[@id='psearch']")).sendKeys(ExpData);
+			driver.findElement(By.xpath("//*[@id='btnsubmit']")).click();
+		}else
+		{
+			driver.findElement(By.xpath("//*[@id='ewContentColumn']/div[2]/div[2]/div/button/span")).click();
+			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[@id='psearch']")).sendKeys(ExpData);
+			driver.findElement(By.xpath("//*[@id='btnsubmit']")).click();
+		}
+		WebElement table=driver.findElement(By.xpath("//table[@id='tbl_a_stock_categorieslist']"));
+		List<WebElement>rows=table.findElements(By.tagName("tr"));
+		for(int i=1;i<rows.size();i++) 
+		{
+			String ActData=driver.findElement(By.xpath("//table[@id='tbl_a_stock_categorieslist']/tbody/tr["+i+"]/td[4]/div/span/span")).getText();
+			Assert.assertEquals(ActData, ExpData,"Data not found in Table");
+			System.out.println(ActData+"  "+ExpData);
+			break;
+		}	
 	}
 
 	public static void mouseDbclick(WebDriver driver,String Locator_Type,String Locator_Value)

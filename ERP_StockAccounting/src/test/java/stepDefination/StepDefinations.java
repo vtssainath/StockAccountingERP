@@ -156,10 +156,9 @@ public class StepDefinations {
 	   FunctionLibrary.waitForElement(driver, LocatorType, LocatorValue, waittime);
 	}
 
-	@Then("^user validate the Stock Category table$")
-	public void user_validate_the_Stock_Category_table() throws Throwable {
-	    
-		
+	@Then("^user validate the Stock Category table with \"([^\"]*)\"$")
+	public void user_validate_the_Stock_Category_table_with(String ExpData) throws Throwable {
+		FunctionLibrary.stockTable(driver, ExpData);	
 	}
 
 

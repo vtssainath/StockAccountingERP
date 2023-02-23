@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 23, 2023 02:20:44 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 23, 2023 07:05:05 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,7 +72,8 @@
 					<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-											<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -85,7 +86,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@StockItemCreation</a></li>
+					<li><a href='#'>@StockCategoryCreation</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -183,195 +184,116 @@
 				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>validating Stock Module</span>
-						<span class='test-time'>Feb 23, 2023 02:20:44 PM</span>
+						<span class='test-time'>Feb 23, 2023 07:05:05 PM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='skip'>
-	<div class='category-list'>
-		<span class='category label white-text'>@StockItemCreation</span>
-	</div>
-	<span class='duration right label'>0h 0m 0s+53ms</span>
+<div class='scenariooutline node' test-id='2' status='skip'>
+	<span class='duration right label'>0h 0m 0s+55ms</span>
 	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Stock Item Creation Functionality Validation</span>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Stock Category Creation Functionality Validation</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Open Browser</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='4' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Open Application</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='5' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Wait For Username with "name" and "username" with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='6' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Enter Username as "admin" with "name" and "username"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='7' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Enter Password as "master" with "id" and "password"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='8' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Click On Login with "name" and "btnsubmit"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='9' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Wait For Stock Items with "xpath" and "//a[.='Stock Items ']" with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='10' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Mouse drag to Stock Items with "xpath" and "//a[.='Stock Items ']"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='11' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Mouse Click on Stock Categories with "xpath" and "(//a[.='Stock Categories'])[2]"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='12' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Wait for Add +icon button with "xpath" and "(//a[@data-caption='Add'])[1]" with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='13' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Click on Add +icon button with "xpath" and "(//a[@data-caption='Add'])[1]"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='14' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Wait for Category Name with "xpath" and "//input[@id='x_Category_Name']" with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='15' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Enter Category Name as "Stationary" with "xpath" and "//input[@id='x_Category_Name']"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='16' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Click On Add Button with "id" and "btnAction"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='17' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Wait For Ok Button with "xpath" and "//button[.='OK!']" with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='18' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Click On Ok Button with "xpath" and "//button[.='OK!']"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='19' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Wait For Alert with "xpath" and "//button[@class='ajs-button btn btn-primary']"with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='20' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Click On Alert with "xpath" and "//button[@class='ajs-button btn btn-primary']"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='21' class='node then skip' status='skip'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user validate the Stock Category table</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='22' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Wait for Logout with "xpath" and "(//a[text()=' Logout'])[2]" with time "10"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='23' class='node and skip' status='skip'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Click on Logout with "xpath" and "(//a[text()=' Logout'])[2]"</span>
-				<div class='pre'>skipped</div>
-			
-		</li>
-		<li test-id='24' class='node when skip' status='skip'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user closes the browser</span>
-				<div class='pre'>skipped</div>
-			
+		<li test-id='3' class='node scenario skip' status='skip'>
+			<div class='category-list'>
+				<span class='category label white-text'>@StockCategoryCreation</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Stock Category Creation Functionality Validation</span>
+			
+				<ul class='steps'>
+					<li test-id='4' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Open Browser</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='5' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Open Application</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='6' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Wait For Username with "name" and "username" with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='7' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Enter Username as "admin" with "name" and "username"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='8' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Enter Password as "master" with "id" and "password"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='9' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Click On Login with "name" and "btnsubmit"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='10' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Wait For Stock Items with "xpath" and "//a[.='Stock Items ']" with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='11' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Mouse drag to Stock Items with "xpath" and "//a[.='Stock Items ']"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='12' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Mouse Click on Stock Categories with "xpath" and "(//a[.='Stock Categories'])[2]"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='13' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Wait for Add +icon button with "xpath" and "(//a[@data-caption='Add'])[1]" with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='14' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click on Add +icon button with "xpath" and "(//a[@data-caption='Add'])[1]"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='15' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Wait for Category Name with "xpath" and "//input[@id='x_Category_Name']" with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='16' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Enter Category Name as "<CategotyName>" with "xpath" and "//input[@id='x_Category_Name']"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='17' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Click On Add Button with "id" and "btnAction"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='18' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Wait For Ok Button with "xpath" and "//button[.='OK!']" with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='19' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Click On Ok Button with "xpath" and "//button[.='OK!']"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='20' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Wait For Alert with "xpath" and "//button[@class='ajs-button btn btn-primary']"with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='21' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Click On Alert with "xpath" and "//button[@class='ajs-button btn btn-primary']"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='22' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then user validate the Stock Category table with "<CategotyName>"</span>
+							<div class='pre'>undefined</div>
+					</li>
+					<li test-id='23' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When Wait for Logout with "xpath" and "(//a[text()=' Logout'])[2]" with time "10"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='24' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And Click on Logout with "xpath" and "(//a[text()=' Logout'])[2]"</span>
+							<div class='pre'>skipped</div>
+					</li>
+					<li test-id='25' class='node when skip' status='skip'><b>When</b>
+						<span class="bdd-step-name">When user closes the browser</span>
+							<div class='pre'>skipped</div>
+					</li>
+				</ul>
 		</li>
 	</ul>
 </div>
@@ -429,7 +351,7 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@StockItemCreation</span>
+						<span class='category-name'>@StockCategoryCreation</span>
 						<span class='category-status right'>
 							<span class='label others'>1</span>
 						</span>
@@ -452,8 +374,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 23, 2023 02:20:44 PM</td>
-										<td class='linked' test-id='2'>validating Stock Module.Stock Item Creation Functionality Validation</td>
+										<td>Feb 23, 2023 07:05:05 PM</td>
+										<td class='linked' test-id='3'>validating Stock Module.Stock Category Creation Functionality Validation.Stock Category Creation Functionality Validation</td>
 										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
@@ -500,19 +422,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 23, 2023 02:20:44 PM</div>
+					<div class='panel-lead'>Feb 23, 2023 07:05:05 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 23, 2023 02:20:45 PM</div>
+			 		<div class='panel-lead'>Feb 23, 2023 07:05:05 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>117ms</div>
+					<div class='panel-lead'>122ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -527,7 +449,7 @@
 							<th>Others</th>
 						</tr>
 						<tr>
-							<td>@StockItemCreation</td>
+							<td>@StockCategoryCreation</td>
 							<td>0</td>
 							<td>0</td>
 							<td>1</td>
