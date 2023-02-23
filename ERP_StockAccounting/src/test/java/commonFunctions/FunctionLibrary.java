@@ -193,20 +193,20 @@ public class FunctionLibrary
 		}	
 	}
 	
-	public static void mouseClick(WebDriver driver,String Locator_Type,String Locator_Value)
+	public static void mouseClick(WebDriver driver,String LocatorType,String LocatorValue)
 	{
-		if (Locator_Type.equalsIgnoreCase("name")) 
+		if (LocatorType.equalsIgnoreCase("name")) 
 		{
 			Actions ac = new Actions(driver);
-			ac.moveToElement(driver.findElement(By.name(Locator_Value))).click().perform();
-		}else if (Locator_Type.equalsIgnoreCase("id")) 
+			ac.moveToElement(driver.findElement(By.name(LocatorValue))).click().perform();
+		}else if (LocatorType.equalsIgnoreCase("id")) 
 		{
 			Actions ac = new Actions(driver);
-			ac.moveToElement(driver.findElement(By.id(Locator_Value))).click().perform();	
-		}else if (Locator_Type.equalsIgnoreCase("xpath")) 
+			ac.moveToElement(driver.findElement(By.id(LocatorValue))).click().perform();	
+		}else if (LocatorType.equalsIgnoreCase("xpath")) 
 		{
 			Actions ac = new Actions(driver);
-			ac.moveToElement(driver.findElement(By.xpath(Locator_Value))).click().perform();
+			ac.moveToElement(driver.findElement(By.xpath(LocatorValue))).click().perform();
 		}
 	}
 

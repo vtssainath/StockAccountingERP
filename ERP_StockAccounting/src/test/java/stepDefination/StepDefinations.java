@@ -118,12 +118,12 @@ public class StepDefinations {
 
 	@When("^Mouse drag to Stock Items with \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void mouse_drag_to_Stock_Items_with_and(String LocatorType, String LocatorValue) throws Throwable {
-	   
+	   FunctionLibrary.mouseDrag(driver, LocatorType, LocatorValue);
 	}
 
 	@When("^Mouse Click on Stock Categories with \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void mouse_Click_on_Stock_Categories_with_and(String LocatorType, String LocatorValue) throws Throwable {
-	    
+	    FunctionLibrary.mouseClick(driver, LocatorType, LocatorValue);
 	}
 
 	@When("^Wait for Add \\+icon button with \"([^\"]*)\" and \"([^\"]*)\" with time \"([^\"]*)\"$")
