@@ -1,6 +1,6 @@
-@StockAccouhnting
-Feature: Validating Login Module
 @Login
+Feature: Validating Login Module
+@Login1
 Scenario: Login Functionality Validation
 When Open Browser
 When Open Application
