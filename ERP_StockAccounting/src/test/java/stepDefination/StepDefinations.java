@@ -126,16 +126,6 @@ public class StepDefinations {
 	    FunctionLibrary.mouseClick(driver, LocatorType, LocatorValue);
 	}
 
-	@When("^Wait for Add \\+icon button with \"([^\"]*)\" and \"([^\"]*)\" with time \"([^\"]*)\"$")
-	public void wait_for_Add_icon_button_with_and_with_time(String LocatorType, String LocatorValue, String waittime) throws Throwable {
-	    FunctionLibrary.waitForElement(driver, LocatorType, LocatorValue, waittime);
-	}
-
-	@When("^Click on Add \\+icon button with \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void click_on_Add_icon_button_with_and(String LocatorType, String LocatorValue) throws Throwable {
-	    FunctionLibrary.clickAction(driver, LocatorType, LocatorValue);
-	}
-
 	@When("^Wait for Category Name with \"([^\"]*)\" and \"([^\"]*)\" with time \"([^\"]*)\"$")
 	public void wait_for_Category_Name_with_and_with_time(String LocatorType, String LocatorValue, String waittime) throws Throwable {
 	    FunctionLibrary.waitForElement(driver, LocatorType, LocatorValue, waittime);
@@ -159,6 +149,26 @@ public class StepDefinations {
 	@Then("^user validate the Stock Category table with \"([^\"]*)\"$")
 	public void user_validate_the_Stock_Category_table_with(String ExpData) throws Throwable {
 		FunctionLibrary.stockTable(driver, ExpData);	
+	}
+	
+	@When("^Wait For Customer with \"([^\"]*)\" and\"([^\"]*)\" with time \"([^\"]*)\"$")
+	public void wait_For_Customer_with_and_with_time(String LocatorType, String LocatorValue, String waittime) throws Throwable {
+	    
+	}
+
+	@When("^Click On Customer with \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void click_On_Customer_with_and(String LocatorType, String LocatorValue) throws Throwable {
+	    FunctionLibrary.clickAction(driver, LocatorType, LocatorValue);
+	}
+
+	@When("^Wait For Customer Number with \"([^\"]*)\" and \"([^\"]*)\" with time \"([^\"]*)\"$")
+	public void wait_For_Customer_Number_with_and_with_time(String LocatorType, String LocatorValue, String waittime) throws Throwable {
+		FunctionLibrary.waitForElement(driver, LocatorType, LocatorValue, waittime);
+	}
+
+	@Then("^user validate the Customer table$")
+	public void user_validate_the_Customer_table() throws Throwable {
+		FunctionLibrary.customerTable(driver, "5");
 	}
 
 

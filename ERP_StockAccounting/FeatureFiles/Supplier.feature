@@ -1,5 +1,6 @@
+@Supplier
 Feature: validating Supplier Module
-@SupplierCreation
+@Supplier1
 Scenario Outline: Supplier creation Functionality Validation
 When Open Browser
 When Open Application

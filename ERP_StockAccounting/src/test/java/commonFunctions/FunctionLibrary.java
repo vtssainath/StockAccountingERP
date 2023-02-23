@@ -128,7 +128,7 @@ public class FunctionLibrary
 			driver.findElement(By.xpath("//*[@id='btnsubmit']")).click();
 		}else
 		{
-			driver.findElement(By.xpath("//*[@id='ewContentColumn']/div[2]/div[2]/div/button/span")).click();
+			driver.findElement(By.xpath("//button[@class='btn btn-default ewSearchToggle']")).click();
 			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
 			Thread.sleep(3000);
 			driver.findElement(By.xpath("//*[@id='psearch']")).sendKeys(Exp_data);
@@ -192,7 +192,7 @@ public class FunctionLibrary
 			ac.moveToElement(driver.findElement(By.xpath(LocatorValue))).perform();
 		}	
 	}
-	
+
 	public static void mouseClick(WebDriver driver,String LocatorType,String LocatorValue)
 	{
 		if (LocatorType.equalsIgnoreCase("name")) 
@@ -210,7 +210,7 @@ public class FunctionLibrary
 		}
 	}
 
-		public static void stockTable(WebDriver driver,String ExpData) throws Throwable 
+	public static void stockTable(WebDriver driver,String ExpData) throws Throwable 
 	{
 		if(driver.findElement(By.xpath("//*[@id='psearch']")).isDisplayed()){
 			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
@@ -219,7 +219,7 @@ public class FunctionLibrary
 			driver.findElement(By.xpath("//*[@id='btnsubmit']")).click();
 		}else
 		{
-			driver.findElement(By.xpath("//*[@id='ewContentColumn']/div[2]/div[2]/div/button/span")).click();
+			driver.findElement(By.xpath("//button[@class='btn btn-default ewSearchToggle']")).click();
 			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
 			Thread.sleep(3000);
 			driver.findElement(By.xpath("//*[@id='psearch']")).sendKeys(ExpData);
@@ -252,6 +252,35 @@ public class FunctionLibrary
 			ac.moveToElement(driver.findElement(By.xpath(Locator_Value))).doubleClick().perform();
 		}
 
+	}
+
+	public static void customerTable(WebDriver driver,String column) throws Throwable 
+	{
+		FileReader fr = new FileReader("./CaptureData/captnumber.txt");
+		BufferedReader br = new BufferedReader(fr);
+		String ExpData = br.readLine();
+		if(driver.findElement(By.xpath("//*[@id='psearch']")).isDisplayed()){
+			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[@id='psearch']")).sendKeys(ExpData);
+			driver.findElement(By.xpath("//*[@id='btnsubmit']")).click();
+		}else
+		{
+			driver.findElement(By.xpath("//button[@class='btn btn-default ewSearchToggle']")).click();
+			driver.findElement(By.xpath("//*[@id='psearch']")).clear();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//*[@id='psearch']")).sendKeys(ExpData);
+			driver.findElement(By.xpath("//*[@id='btnsubmit']")).click();
+		}
+		WebElement table=driver.findElement(By.xpath("//table[@id='tbl_a_customerslist']"));
+		List<WebElement>rows=table.findElements(By.tagName("tr"));
+		for(int i=1;i<rows.size();i++) 
+		{
+			String ActData=driver.findElement(By.xpath("//table[@id='tbl_a_customerslist']/tbody/tr["+i+"]/td["+column+"]/div/span/span")).getText();
+			Assert.assertEquals(ActData, ExpData,"Data not found in Table");
+			System.out.println(ActData+"  "+ExpData);
+			break;
+		}	
 	}
 
 
